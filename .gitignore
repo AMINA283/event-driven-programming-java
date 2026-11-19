@@ -1,1 +1,8 @@
+
 *.class
+/week04-event-handling/activity5-interactive-form/RegistrationForm/nbproject/private/
+/week04-event-handling/activity5-interactive-form/RegistrationForm/build/
+/week06-javafx/week06-javafx/target/
+**/target/
+hs_err_pid*.log
+replay_pid*.log
