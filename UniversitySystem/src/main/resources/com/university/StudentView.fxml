@@ -1,0 +1,58 @@
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.university.StudentController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Student Management"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10">
+        <TextField fx:id="regField"
+                   promptText="Registration Number"
+                   HBox.hgrow="ALWAYS"/>
+
+        <TextField fx:id="firstNameField"
+                   promptText="First Name"
+                   HBox.hgrow="ALWAYS"/>
+
+        <TextField fx:id="lastNameField"
+                   promptText="Last Name"
+                   HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <Button text="Save Student"
+            onAction="#handleSaveStudent"
+            fx:id="saveButton"/>
+
+    <Label text="Registered Students"
+           style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="studentTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colReg"
+                         text="Registration Number"
+                         prefWidth="180"/>
+
+            <TableColumn fx:id="colFirst"
+                         text="First Name"
+                         prefWidth="150"/>
+
+            <TableColumn fx:id="colLast"
+                         text="Last Name"
+                         prefWidth="150"/>
+        </columns>
+    </TableView>
+
+    <Label fx:id="statusLabel" text="Ready"/>
+
+</VBox>
+
